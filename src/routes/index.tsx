@@ -494,6 +494,13 @@ function Index() {
                 href="https://t.me/yoshlarfrontofisi"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={(e) => {
+                  const tg = (window as any).Telegram?.WebApp;
+                  if (tg) {
+                    e.preventDefault();
+                    tg.openTelegramLink("https://t.me/yoshlarfrontofisi");
+                  }
+                }}
                 className="w-full sm:w-auto bg-ink text-paper px-8 py-4 tracking-widest font-bold hover:bg-blood transition-colors shadow-noir"
                 style={{ fontFamily: "'Oswald', sans-serif", background: "var(--color-ink)", color: "var(--color-paper)" }}
               >
